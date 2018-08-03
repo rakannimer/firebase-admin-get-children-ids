@@ -9,7 +9,7 @@ const firebase = require('firebase-admin');
 const getUserIDs = async () => {
   const databaseURL = "<FIREBASE_DATABASE_URL>";
   const credential = require("./firebase-key.json");
-  const userIDs = await getChildrenIDs('/users/');
+  const userIDs = await getChildrenIDs('/users/', { firebase, credential, databaseURL });
   return userIDs;
 }
 ```
@@ -38,14 +38,14 @@ Use this in your node server or on cli tools.
 
 // Import it in your project
 
-import {getChildrenIDs} from 'firebase-admin-get-children-ids'
+import { getChildrenIDs } from 'firebase-admin-get-children-ids'
 // Or
-const {getChildrenIDs} = require('firebase-admin-get-children-ids')
+const { getChildrenIDs } = require('firebase-admin-get-children-ids')
 
 // Import firebase-admin
-import admin from 'firebase-admin'
+import firebase from 'firebase-admin'
 // Or
-const admin = require('firebase-admin')
+const firebase = require('firebase-admin')
 
 
 // Use it
@@ -53,7 +53,7 @@ const admin = require('firebase-admin')
 const getUserIDs = async () => {
   const databaseURL = "<FIREBASE_DATABASE_URL>";
   const credential = require("./firebase-key.json");
-  const userIDs = await getChildrenIDs('/users/');
+  const userIDs = await getChildrenIDs('/users/', { firebase, credential, databaseURL });
   return userIDs;
 }
 

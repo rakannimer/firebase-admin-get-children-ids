@@ -1,6 +1,6 @@
 {
   "name": "firebase-admin-get-children-ids",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,10 @@
   },
   "peerDependencies": {
     "firebase-admin": ">=5.0"
-  }
+  },
+  "files": [
+    "index.js",
+    "main.js",
+    "test.js"
+  ]
 }
