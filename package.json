@@ -1,8 +1,9 @@
 {
   "name": "firebase-admin-get-children-ids",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
+  "module":"main.js",
   "scripts": {
     "test": "node test.js"
   },
