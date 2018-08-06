@@ -44,7 +44,12 @@ export const getChildrenIDs = async (
     const firebaseRestUrl = `${databaseURL}/${path}.json?access_token=${adminIDToken}&shallow=true`;
     try {
       const result = await axios.get(firebaseRestUrl);
+
+      if (result.data === null || result.data == undefined) {
+        return [];
+      } 
       return Object.keys(result.data);
+      
     } catch (err) {
       console.error("error", err.message);
       throw err;
