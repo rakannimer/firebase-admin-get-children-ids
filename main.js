@@ -32,6 +32,10 @@ const getAdminIDToken = async credential => {
   return clientCredential.access_token;
 };
 
+const isObject = (x) => {
+	return typeof x === 'object' && x !== null;
+};
+
 export const getChildrenIDs = async (
   path = "",
   { firebase, credential, databaseURL }
@@ -48,7 +52,12 @@ export const getChildrenIDs = async (
       if (result.data === null || result.data == undefined) {
         return [];
       } 
-      return Object.keys(result.data);
+      if (isObject(result.data)) {
+        return Object.keys(result.data);
+      } else {
+        return [];
+      }
+      
       
     } catch (err) {
       console.error("error", err.message);
