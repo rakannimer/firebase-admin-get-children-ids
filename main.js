@@ -2,7 +2,7 @@ import admin from "firebase-admin";
 import axios from "axios";
 import { JWT } from "google-auth-library";
 
-const initializeApp = ({ firebase, databaseURL, credential }) => {
+export const initializeApp = ({ firebase, databaseURL, credential }) => {
   try {
     firebase.initializeApp({
       databaseURL,
@@ -17,7 +17,7 @@ const initializeApp = ({ firebase, databaseURL, credential }) => {
   }
 };
 
-const getAdminIDToken = async credential => {
+export const getAdminIDToken = async credential => {
   const scopes = [
     "https://www.googleapis.com/auth/userinfo.email",
     "https://www.googleapis.com/auth/firebase.database"
@@ -32,7 +32,7 @@ const getAdminIDToken = async credential => {
   return clientCredential.access_token;
 };
 
-const isObject = (x) => {
+export const isObject = (x) => {
 	return typeof x === 'object' && x !== null;
 };
 
