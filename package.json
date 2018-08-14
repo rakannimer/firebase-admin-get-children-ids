@@ -1,29 +1,33 @@
 {
   "name": "firebase-admin-get-children-ids",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "",
   "main": "index.js",
-  "module":"main.js",
+  "module": "main.js",
   "scripts": {
-    "test": "node test.js"
+    "build": "rollup -c",
+    "test": "node test.js",
+    "prepublish": "yarn build && yarn test"
   },
   "keywords": [],
   "author": "rakannimer",
   "license": "ISC",
   "devDependencies": {
-    "firebase-admin": "^5.13.1"
+    "@types/axios": "^0.14.0",
+    "firebase-admin": "^5.13.1",
+    "prettier": "^1.14.2",
+    "rollup": "^0.64.1",
+    "rollup-plugin-typescript2": "^0.16.1",
+    "typescript": "^3.0.1"
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "esm": "^3.0.74",
     "google-auth-library": "^1.6.1"
   },
   "peerDependencies": {
     "firebase-admin": ">=5.0"
   },
   "files": [
-    "index.js",
-    "main.js",
-    "test.js"
+    "dist/"
   ]
 }

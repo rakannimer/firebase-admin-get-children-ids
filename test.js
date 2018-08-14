@@ -1,5 +1,5 @@
 const admin = require("firebase-admin");
-const { getChildrenIDs } = require("./index");
+const { getChildrenIDs } = require("./dist/index.cjs");
 
 const main = async () => {
   const credential = require("./test-creds/firebase-credential.json");
