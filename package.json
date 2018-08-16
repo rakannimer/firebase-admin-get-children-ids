@@ -1,6 +1,6 @@
 {
   "name": "firebase-admin-get-children-ids",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
