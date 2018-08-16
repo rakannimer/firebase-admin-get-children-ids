@@ -12,7 +12,7 @@ export type FirebaseCredential = {
   auth_uri: string;
   token_uri: string;
   auth_provider_x509_cert_url: string;
-  clienMimeType_x509_cert_url: string;
+  clienMimeType_x509_cert_url?: string;
 };
 
 export type InitializeAppArgs = {
